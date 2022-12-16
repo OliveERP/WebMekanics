@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include volods *.css
+recursive-include volods *.csv
+recursive-include volods *.html
+recursive-include volods *.ico
+recursive-include volods *.js
+recursive-include volods *.json
+recursive-include volods *.md
+recursive-include volods *.png
+recursive-include volods *.py
+recursive-include volods *.svg
+recursive-include volods *.txt
+recursive-exclude volods *.pyc
