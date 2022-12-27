@@ -41,4 +41,4 @@ following command which will create a new app on the instance.
          or you can use supervisorctl as well. Both will do the trick
 
 
-With that the ap will be installed on the ERPNext instance
+With that the app will be installed on the ERPNext instance
