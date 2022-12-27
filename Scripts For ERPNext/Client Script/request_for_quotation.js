@@ -1,5 +1,5 @@
 // Create a new Client Script as:
-// Doctype: Delivery Note
+// Doctype: Request For Quotation
 // Apply To: Form
 // Enabled: Click this checkbox
 // Script: Paste the following code in Script section and SAVE the document
