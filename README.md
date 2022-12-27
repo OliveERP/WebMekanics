@@ -32,5 +32,13 @@ following command which will create a new app on the instance.
 
 5. Check the installed app through this command
          <h4>$ bench --site {your site name} list-apps</h4>
+         
+
+6. Run the following commands:
+         <h4>$ bench migrate</h4>
+         <h4>$ bench restart</h4>
+         
+         or you can use supervisorctl as well. Both will do the trick
 
 
+With that the ap will be installed on the ERPNext instance
