@@ -95,17 +95,17 @@ app_include_js = "/assets/volods/js/item_query_override.js"
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
+#doc_events = {
     # 	"*": {
     # 		"on_update": "method",
     # 		"on_cancel": "method",
     # 		"on_trash": "method"
     #	}
-    "Item": {
-        "validate": "volods.volods.functions.msg"
-    }
+    #"Item": {
+    #    "validate": "volods.volods.functions.msg"
+    #}
 
-}
+#}
 
 
 # Scheduled Tasks
