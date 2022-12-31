@@ -1,3 +1,9 @@
+// Create a new Client Script as:
+// Doctype: Supplier Quotation
+// Apply To: Form
+// Enabled: Click this checkbox
+// Script: Paste the following code in Script section and SAVE the document
+
 cur_frm.cscript.refresh = function(frm) {
        
         cur_frm.set_query("item_code", "items", function () {
