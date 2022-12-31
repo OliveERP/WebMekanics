@@ -1,3 +1,9 @@
+// Create a new Client Script as:
+// Doctype: Item
+// Apply To: Form
+// Enabled: Click this checkbox
+// Script: Paste the following code in Script section and SAVE the document
+
 frappe.ui.form.on('Item', {
 	refresh(frm) {
       cur_frm.add_custom_button(__('Upload Image'), () => {
