@@ -42,3 +42,38 @@ following command which will create a new app on the instance.
 
 
 With that the app will be installed on the ERPNext instance
+
+
+# Adding Image Snapshot in Listview Procedure
+This customization is required in any doctype where image snapshot is to be shown in listview. Currently, this behavior has to be duplicated in following doctypes:
+1. Material Request
+2. Purchase Order
+3. Request for Quotation
+4. Quotation
+5. Supplier Quotation
+6. Purchase Receipt
+7. Purchase Invoice
+8. Sales Order
+9. Pick List
+10. Delivery Note
+11. Sales Invoice
+
+Following steps have to be followed:
+1. Go to Customize form of the doctype. Click on three dots(Menu) and click "Customize".
+![image](https://user-images.githubusercontent.com/120718232/210155429-d8a52bfe-b776-4e73-9627-5b414e26de11.png)
+
+2. A customize form will open. Click on "Customize Child Table" and select its item table at top. By default, its the document name follows by the word 'Item'. For instance, if the selected doctype is 'Supplier Quotation', then, its item table is 'Supplier Quotation Item'.
+![image](https://user-images.githubusercontent.com/120718232/210155438-281f97d1-70a9-45ec-a187-2931b130bb13.png)
+
+3. Create a new field with label as 'image_view_html', and type as 'Long Text'. Select 'In List View' and 'Read Only' checkboxes.
+![image](https://user-images.githubusercontent.com/120718232/210155480-997f03f2-0161-4dad-ae8c-b0cb1e742548.png)
+![image](https://user-images.githubusercontent.com/120718232/210155486-7a92bce3-d745-4502-b2a3-95c8fd053c0f.png)
+
+4. Click on 'Update' to save the changes.
+5. Once the form is updated, change the label to any desired name. For now, its 'Image Preview'
+![image](https://user-images.githubusercontent.com/120718232/210155522-69998103-2ce9-42b6-bcb7-cc344524f645.png)
+
+6. Click on 'Update' to save and update the form.
+
+For reference, please refer to this video tutorial: 
+https://drive.google.com/file/d/1XR3vbgZ2U89kJHd0sKOUp0uDZ5vE6MWp/view?usp=share_link
