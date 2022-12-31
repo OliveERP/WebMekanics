@@ -1,18 +1,13 @@
 from xml.dom.minidom import Document
 import frappe
+import base64
 
 from frappe.model.mapper import get_mapped_doc
 
 
 @frappe.whitelist()
-def msg(doctype, method):
-    frappe.msgprint("Here from function.py")
-
-
-@frappe.whitelist()
 def item_search(doctype, txt, searchfield, start, page_len, filters, as_dict=False):
     conditions = []
-    frappe.msgprint("item_query>Item Search")
 
     # Get searchfields from meta and use in Item Link field query
     meta = frappe.get_meta("Item", cached=True)
@@ -83,9 +78,10 @@ def get_all_invoices(source_name, target_doc=None):
         target.qty = -1 * obj.qty
         target.stock_qty = -1 * obj.qty
         target.amount = -1 * obj.amount
-        target.base_amount = -1 * obj.base_amount
+        target.base_amount = -1 * obj.base_amount987
         target.net_amount = -1 * obj.net_amount
         target.base_net_amount = -1 * obj.base_net_amount
+        # add sales_invoice_no with obj.parent
 
     doc = get_mapped_doc("Sales Invoice", source_name,	{
         "Sales Invoice": {
@@ -109,4 +105,15 @@ def get_all_invoices(source_name, target_doc=None):
         },
     }, target_doc)
 
+    # doc.qty =
+
     return doc
+
+
+@frappe.whitelist()
+def get_image_url(drive_url):
+    data_bytes64 = base64.b64encode(bytes(drive_url, 'utf-8'))
+    data_bytes64_String = data_bytes64.decode(
+        'utf-8').replace('/', '_').replace('+', '-').rstrip("=")
+    resultUrl = f"https://api.onedrive.com/v1.0/shares/u!{data_bytes64_String}/root/content"
+    return resultUrl
