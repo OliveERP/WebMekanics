@@ -77,3 +77,14 @@ Following steps have to be followed:
 
 For reference, please refer to this video tutorial: 
 https://drive.google.com/file/d/1XR3vbgZ2U89kJHd0sKOUp0uDZ5vE6MWp/view?usp=share_link
+
+# Adding 'Sales Invoice No.' column in Sales Invoice Item
+1. Go to Customize for of Sales Invoice by clicking on three dots and then 'Customize'.
+2. Click on 'Customize Child Table' and select 'Sales Invoice Item'.
+3. Create a new field after row 90 with label 'sales_invoice_no', type 'Link'. Select 'In List View' and 'Read Only' checkboxes. In Option, type 'Sales Invoice'
+![image](https://user-images.githubusercontent.com/120718232/210156304-c4261f20-180b-4238-b928-7930bcc3d99b.png)
+
+4. Click 'Update'.
+5. Once the field is created, change the label to "Sales Invoice No.".
+6. Click 'Update' to save the changes. Refresh the system to ensure the changes.
+
