@@ -93,5 +93,6 @@ Please note, its respective Client Script needs to be added as well.
 # Upload Image from One drive
 1. Upload the image in the one drive and get its share link.
 2. In respective Item from, click on the button "Upload Image" and paste the one drive link.
-3. The image will be uploaded.
-4. Please refer to this video demonstration of the process: https://drive.google.com/file/d/1uCVPkcgdqKeY2vlmv1LLMFIqOjAF0gq_/view?usp=share_link
+3. Click on 'Submit'
+4. The image will be uploaded.
+5. Please refer to this video demonstration of the process: https://drive.google.com/file/d/1uCVPkcgdqKeY2vlmv1LLMFIqOjAF0gq_/view?usp=share_link
