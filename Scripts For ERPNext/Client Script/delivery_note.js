@@ -30,9 +30,9 @@ frappe.ui.form.on('Delivery Note Item', {
     	frappe.model.with_doc("Item", row.item_code, function() {
 	        var file = frappe.model.get_doc("Item", row.item_code);
             row.image_view_html = repl('<img src="%(imgurl)s" width="31px">', {imgurl: file.image});
-            if (!file){
-                 row.image_view_html = repl('<img src="%(imgurl)s" width="31px">', {imgurl: row.image});
-            }
+            //if (!file){
+            //     row.image_view_html = repl('<img src="%(imgurl)s" width="31px">', {imgurl: row.image});
+            //}
             //frm.refresh_field('items');
     	        
     	   });
