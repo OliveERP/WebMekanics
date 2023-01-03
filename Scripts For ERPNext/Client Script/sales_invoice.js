@@ -5,7 +5,8 @@
 // Script: Paste the following code in Script section and SAVE the document
 
 
-erpnext.selling.ItemListCustom = erpnext.selling.SalesInvoiceController.extend({
+
+erpnext.selling.ItemListCustom = erpnext.accounts.SalesInvoiceController.extend({
     setup_queries:function(doc, dt, dn){
        this._super();
       if(this.frm.fields_dict["items"].grid.get_field('item_code')) {
