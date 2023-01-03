@@ -81,7 +81,7 @@ def get_all_invoices(source_name, target_doc=None):
         target.base_amount = -1 * obj.base_amount987
         target.net_amount = -1 * obj.net_amount
         target.base_net_amount = -1 * obj.base_net_amount
-        # add sales_invoice_no with obj.parent
+        target.sales_invoice_no = obj.parent
 
     doc = get_mapped_doc("Sales Invoice", source_name,	{
         "Sales Invoice": {
@@ -104,8 +104,14 @@ def get_all_invoices(source_name, target_doc=None):
             # "condition": lambda doc: abs(doc.received_qty) < abs(doc.qty + (doc.qty*((frappe.db.get_value("Item", {"name": doc.item_code}, "over_delivery_receipt_allowance")/100) or (frappe.db.get_single_value("Stock Settings", "over_delivery_receipt_allowance")/100)) or 0)) and doc.delivered_by_supplier != 1
         },
     }, target_doc)
+    qty = 0.0
+    total = 0.0
+    for val in doc.items:
+        qty = qty + val.qty
+        total = total + val.amount
 
-    # doc.qty =
+    doc.total_qty = -1 * qty
+    doc.total = -1 * total
 
     return doc
 
