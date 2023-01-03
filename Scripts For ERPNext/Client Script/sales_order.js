@@ -43,9 +43,9 @@ frappe.ui.form.on('Sales Order Item', {
     		    if(r.message ){
     		        console.log(r.message);
     		       row.rate = r.message[0].rate
-    		      setInterval(function () {row.rate = r.message[0].rate ; cur_frm.refresh_field("items")}, 500);
-    		      setInterval(function () {row.rate = r.message[0].rate  ; cur_frm.refresh_field("items")}, 1000);
-    		      setInterval(function () {row.rate = r.message[0].rate  ; cur_frm.refresh_field("items")}, 2000);
+    		      setTimeout(function () {row.rate = r.message[0].rate ; cur_frm.refresh_field("items")}, 500);
+    		      setTimeout(function () {row.rate = r.message[0].rate  ; cur_frm.refresh_field("items")}, 1000);
+    		      setTimeout(function () {row.rate = r.message[0].rate  ; cur_frm.refresh_field("items")}, 2000);
     		    }
     		}
     	});
@@ -67,3 +67,4 @@ frappe.ui.form.on('Sales Order Item', {
 });
 
 $.extend(cur_frm.cscript, new erpnext.selling.ItemListCustom({frm: cur_frm}));
+
