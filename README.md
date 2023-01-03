@@ -88,3 +88,8 @@ https://drive.google.com/file/d/1XR3vbgZ2U89kJHd0sKOUp0uDZ5vE6MWp/view?usp=share
 5. Once the field is created, change the label to "Sales Invoice No.".
 6. Click 'Update' to save the changes. Refresh the system to ensure the changes.
 
+# Upload Image from One drive
+1. Upload the image in the one drive and get its share link.
+2. In respective Item from, click on the button "Upload Image" and paste the one drive link.
+3. The image will be uploaded.
+4. Please refer to this video demonstration of the process: https://drive.google.com/file/d/1uCVPkcgdqKeY2vlmv1LLMFIqOjAF0gq_/view?usp=share_link
