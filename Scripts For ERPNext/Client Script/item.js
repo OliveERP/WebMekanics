@@ -21,6 +21,19 @@ frappe.ui.form.on('Item', {
             		    if(r.message ){
             		        console.log(r.message);
             		        cur_frm.set_value('image', r.message);
+            		        frappe.db.insert({
+                                "doctype":"File",
+                                "file_name":"Image for Item " + frm.doc.name,
+                                "file_url":r.message,
+                                "attached_to_doctype":'Item',
+                                "attached_to_name":frm.doc.name
+                            }).then(function(doc) {
+                                 frappe.show_alert({
+				    message:__('Image Added Successfuly!'),
+				    indicator:'green'
+				}, 5);
+                                 
+                                });
             		        frm.save();
             		    }
             		}
