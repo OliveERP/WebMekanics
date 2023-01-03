@@ -78,6 +78,8 @@ Following steps have to be followed:
 For reference, please refer to this video tutorial: 
 https://drive.google.com/file/d/1XR3vbgZ2U89kJHd0sKOUp0uDZ5vE6MWp/view?usp=share_link
 
+Please note, its respective Client Script needs to be added as well.
+
 # Adding 'Sales Invoice No.' column in Sales Invoice Item
 1. Go to Customize for of Sales Invoice by clicking on three dots and then 'Customize'.
 2. Click on 'Customize Child Table' and select 'Sales Invoice Item'.
