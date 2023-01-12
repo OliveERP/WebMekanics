@@ -96,3 +96,8 @@ Please note, its respective Client Script needs to be added as well.
 3. Click on 'Submit'
 4. The image will be uploaded.
 5. Please refer to this video demonstration of the process: https://drive.google.com/file/d/1uCVPkcgdqKeY2vlmv1LLMFIqOjAF0gq_/view?usp=share_link
+
+# Updating Sales Order
+1. Click on 'Cusomize Form' from Menu option
+2. Go to Edit of every field and CHECK "Allow on Submit" of every field wished to be update at all time
+3. Once done, Click on Update to apply the changes.
