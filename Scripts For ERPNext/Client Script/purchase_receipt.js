@@ -4,7 +4,7 @@
 // Enabled: Click this checkbox
 // Script: Paste the following code in Script section and SAVE the document
 
-erpnext.buying.ItemListCustom = erpnext.buying.PurchaseReceiptController.extend({
+erpnext.stock.ItemListCustom = erpnext.stock.PurchaseReceiptController.extend({
     setup_queries:function(doc, dt, dn){
         this._super();
        var me  = this
